@@ -12,7 +12,7 @@ export function ButtonSignIn(props: ButtonProps) {
   return (
     // Aqui o spreed operator para ser aplicado todos os atributos
     <Button
-      className="px-4 py-2 rounded-md bg-indigo-500 w-full text-white-200"
+      className="px-4 py-3 rounded-md bg-indigo-500  w-full text-white-200 font-bold text-md"
       {...props}
     />
   );

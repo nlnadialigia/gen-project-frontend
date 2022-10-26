@@ -4,7 +4,21 @@ module.exports = {
     "./src/**/*tsx"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        white:{
+          200: "#E1E1E6"
+        },
+        gray:{
+          900: "#121214",
+          800: "#202024"
+        },
+        indigo:{
+          500: "#6366F1"
+        }
+
+      }
+    },
   },
   plugins: [],
 }

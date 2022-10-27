@@ -25,7 +25,6 @@ export function FormLogin() {
   }
 
 
-
   function handleGoogleSignIn() {
     const provider = new GoogleAuthProvider();
 

@@ -7,6 +7,8 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   placeholder: string;
 }
 
+
+
 export function InputForm(props: InputProps) {
   return (
     <input

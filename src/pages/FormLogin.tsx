@@ -4,7 +4,7 @@ import { InputForm } from "../components/InputForm";
 
 export function FormLogin() {
   return (
-    <form action="" className="">
+    <form>
       <h1 className="text-3xl font-bold text-gray-200 text-center mb-8">
         Entre na sua conta!
       </h1>

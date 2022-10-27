@@ -25,4 +25,11 @@
 
        * npm run dev ou yarn dev
 
+    para usar a aplicação com a autenticação do google, precisar rodar o server:
+
+    npx vite --host
+
+    e abri o projeto no primeiro link com nome de localhost
+    devido as politicas do firebase
+
 <p>

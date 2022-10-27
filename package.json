@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@radix-ui/react-checkbox": "^1.0.1",
     "@radix-ui/react-label": "^2.0.0",
     "@radix-ui/react-slot": "^1.0.1",
     "phosphor-react": "^1.4.1",

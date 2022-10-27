@@ -18,7 +18,7 @@ interface InputFormProps {
 
 export function InputForm(props: InputProps) {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 mb-3">
       <Label.Root
         htmlFor={props.id}
         className="text-gray-200 text-base font-bold"
@@ -31,7 +31,7 @@ export function InputForm(props: InputProps) {
         </div>
         <input
           {...props.input}
-          className="pl-12 pr-4 py-3 rounded w-[400px] bg-gray-800 text-white-200 text-sm font-bold focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 invalid:border-pink-500 invalid:text-rose-600
+          className="pl-12 pr-4 py-3 rounded w-[400px] bg-gray-800 text-gray-200 text-sm font-bold focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 invalid:border-pink-500 invalid:text-rose-600
           focus:invalid:border-rose-500 focus:invalid:ring-rose-500"
         />
       </div>

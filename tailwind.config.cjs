@@ -1,22 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*tsx",
+    "./src/**/*.tsx",
     "./index.html"
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: 'Inter, sans-serif',
+      },
       colors:{
-        white:{
-          200: "#E1E1E6"
-        },
         gray:{
+          200: "#E1E1E6",
+          800: "#202024",
           900: "#121214",
-          800: "#202024"
         },
-        indigo:{
-          500: "#6366F1"
-        }
 
       }
     },

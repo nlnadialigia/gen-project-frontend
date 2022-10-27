@@ -7,12 +7,12 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     asChild?: boolean
 }
 
-export function ButtonSignIn(props: ButtonProps) {
+export function ButtonForm(props: ButtonProps) {
     const Button = props.asChild ? Slot : 'button'
   return (
     // Aqui o spreed operator para ser aplicado todos os atributos
     <Button
-      className="px-4 py-3 rounded-md bg-indigo-500  w-full text-white-200 font-bold text-md"
+      className="my-8 px-4 py-3 rounded-md text-white bg-indigo-500 hover:bg-indigo-600 w-full text-white-200 font-bold text-md transition-colors"
       {...props}
     />
   );

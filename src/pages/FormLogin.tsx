@@ -2,6 +2,8 @@ import { ButtonForm } from "../components/ButtonForm";
 import { InputForm } from "../components/InputForm";
 import { EnvelopeSimple, Check } from "phosphor-react";
 import * as Checkbox from "@radix-ui/react-checkbox";
+import { Link } from "react-router-dom";
+
 
 import GoogleIcon from "../assets/google-icon.svg";
 import { useState } from "react";
@@ -64,6 +66,10 @@ export function FormLogin() {
       <button className="my-6">
         <img src={GoogleIcon} alt="" />
       </button>
+      <Link to="/" className="text-gray-200 underline underline-offset-2">Esqueceu sua senha?</Link>
+
+      <Link to="/singup" className="text-gray-200 underline underline-offset-2">Não possui conta? crie uma agora</Link>
+            
     </div>
   );
 }

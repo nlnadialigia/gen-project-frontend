@@ -12,6 +12,7 @@ export function ButtonForm(props: ButtonProps) {
   return (
     // Aqui o spreed operator para ser aplicado todos os atributos
     <Button
+      type="submit"
       className="my-8 px-4 py-3 rounded-md text-white bg-indigo-500 hover:bg-indigo-600 w-full text-white-200 font-bold text-md transition-colors"
       {...props}
     />

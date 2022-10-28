@@ -9,20 +9,22 @@ import { auth } from "../services/firebase";
 import * as Checkbox from "@radix-ui/react-checkbox";
 import GoogleIcon from "../assets/google-icon.svg";
 
+
 export function FormLogin() {
   const [rememberMe, setRememberMe] = useState(false);
   const [userGoogle, setUserGoogle] = useState<User>({} as User);
-
   
+
 
   function handleCreateUser(event: FormEvent) {
     event.preventDefault();
-    const formData = new FormData(event.target as HTMLFormElement);
-    const data = Object.fromEntries(formData);
+    const dataForm = new FormData(document.querySelector('#Form') as HTMLFormElement)
+    const data = Object.fromEntries(dataForm)
     console.log(data);
     
     
   }
+
 
 
   function handleGoogleSignIn() {
@@ -39,7 +41,7 @@ export function FormLogin() {
 
   return (
     <div className="my-8 text-white flex flex-col items-center justify-center">
-      <form action="" className="">
+      <form action="#" id="Form">
         <h1 className="text-3xl font-bold text-gray-200 text-center mb-8">
           Entre na sua conta!
         </h1>

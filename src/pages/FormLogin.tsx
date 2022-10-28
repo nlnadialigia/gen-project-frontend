@@ -1,6 +1,6 @@
 import { ButtonForm } from "../components/ButtonForm";
 import { InputForm } from "../components/InputForm";
-import { EnvelopeSimple, Check } from "phosphor-react";
+import { EnvelopeSimple, Check, Key } from "phosphor-react";
 import { Link } from "react-router-dom";
 import { useState, FormEvent } from "react";
 import { GoogleAuthProvider, signInWithPopup, User } from "firebase/auth";
@@ -56,12 +56,12 @@ export function FormLogin() {
         />
         <InputForm
           titleLabel="Senha"
-          icon={<EnvelopeSimple size={20} />}
+          icon={<Key size={20} />}
           input={{
             type: "password",
             name: "password",
             id: "password",
-            placeholder: "******",
+            placeholder: "******",  
           }}
         />
         <label className="mt-8 items-center flex gap-2 text-sm">

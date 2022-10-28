@@ -9,23 +9,16 @@ import { auth } from "../services/firebase";
 import * as Checkbox from "@radix-ui/react-checkbox";
 import GoogleIcon from "../assets/google-icon.svg";
 
-
 export function FormLogin() {
   const [rememberMe, setRememberMe] = useState(false);
   const [userGoogle, setUserGoogle] = useState<User>({} as User);
-  
-
 
   function handleCreateUser(event: FormEvent) {
     event.preventDefault();
-    const dataForm = new FormData(document.querySelector('#Form') as HTMLFormElement)
-    const data = Object.fromEntries(dataForm)
+    const dataForm = new FormData(event.target as HTMLFormElement);
+    const data = Object.fromEntries(dataForm);
     console.log(data);
-    
-    
   }
-
-
 
   function handleGoogleSignIn() {
     const provider = new GoogleAuthProvider();
@@ -41,7 +34,7 @@ export function FormLogin() {
 
   return (
     <div className="my-8 text-white flex flex-col items-center justify-center">
-      <form action="#" id="Form">
+      <form action="#" onSubmit={handleCreateUser}>
         <h1 className="text-3xl font-bold text-gray-200 text-center mb-8">
           Entre na sua conta!
         </h1>
@@ -63,7 +56,7 @@ export function FormLogin() {
             type: "password",
             name: "password",
             id: "password",
-            placeholder: "******",  
+            placeholder: "******",
           }}
         />
         <label className="mt-8 items-center flex gap-2 text-sm">
@@ -86,7 +79,7 @@ export function FormLogin() {
         </label>
 
         <div className="w-[400px] ">
-          <ButtonForm onClick={handleCreateUser}>Enviar</ButtonForm>
+          <ButtonForm>Enviar</ButtonForm>
         </div>
       </form>
       <span className="text-gray-200">ou</span>

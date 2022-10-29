@@ -15,8 +15,9 @@ export function FormLogin() {
 
   function handleCreateUser(event: FormEvent) {
     event.preventDefault();
-    const dataForm = new FormData(event.target as HTMLFormElement);
-    const data = Object.fromEntries(dataForm);
+
+    const formData = new FormData(event.target as HTMLFormElement);
+    const data = Object.fromEntries(formData);
     console.log(data);
   }
 
@@ -45,8 +46,9 @@ export function FormLogin() {
           input={{
             type: "email",
             name: "email",
-            id: "email",
             placeholder: "Digite seu email",
+            required: true
+
           }}
         />
         <InputForm
@@ -54,9 +56,10 @@ export function FormLogin() {
           icon={<Key size={20} />}
           input={{
             type: "password",
+            placeholder: "********",
             name: "password",
-            id: "password",
-            placeholder: "******",
+            minLength:8,
+            required: true
           }}
         />
         <label className="mt-8 items-center flex gap-2 text-sm">
